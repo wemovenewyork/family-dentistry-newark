@@ -673,7 +673,7 @@
 
   /* ---- Responsive ---- */
   @media (max-width: 860px) {
-    .shell { margin: 0; border-radius: 0; border-left: none; border-right: none; }
+    .shell { margin: 0; border-radius: 0; border-left: none; border-right: none; box-shadow: none; }
     .hero, .split.doc, .split.doc-about, .split.even,
     .contactgrid, footer.sitefooter {
       grid-template-columns: 1fr;
@@ -682,25 +682,77 @@
     .proofbar .stat:nth-child(2) { border-right: none; }
     .proofbar .stat { border-bottom: 0.5px solid var(--line-soft); }
     .cardgrid, .reviewgrid, .twocol { grid-template-columns: 1fr; }
+
+    /* Mobile nav drawer — bigger touch targets */
     .navtoggle { display: block; }
     nav.mainnav {
-      display: none; flex-direction: column; align-items: flex-start;
-      width: 100%; gap: 6px; padding-top: 8px;
+      display: none; flex-direction: column; align-items: stretch;
+      width: 100%; gap: 4px; padding: 8px 0 4px;
     }
     nav.mainnav.open { display: flex; }
-    nav.mainnav a { width: 100%; }
-    .nav-call { width: 100%; text-align: center; }
-    .ctaband { flex-direction: column; align-items: flex-start; }
+    nav.mainnav a:not(.nav-call) { width: 100%; padding: 12px 4px; font-size: 14px; }
+    nav.mainnav a:not(.nav-call)::after { display: none; }
+    .nav-call { width: 100%; justify-content: center; margin-left: 0; margin-top: 8px; padding: 14px 22px; }
+
+    /* CTA band stacks; buttons go full-width */
+    .ctaband { flex-direction: column; align-items: flex-start; padding: 2.25rem 1.25rem; }
     .ctaband-actions { width: 100%; }
+    .cta-call, .cta-ghost { width: 100%; box-sizing: border-box; }
+
+    /* Hero CTAs stack & go full-width */
+    .hero-ctas { width: 100%; flex-direction: column; align-items: stretch; gap: 8px; }
+    .hero-ctas .btn-primary { width: 100%; text-align: center; }
+    .hero-ctas .btn-textlink { width: 100%; text-align: center; padding: 12px 8px; }
+
+    /* Tighter vertical rhythm */
+    .hero { padding: 2.5rem 1.25rem; }
+    .section { padding: 2.25rem 1.25rem; }
+    .section.tight { padding: 1.5rem 1.25rem; }
+    .breadcrumb { padding: 1.5rem 1.25rem 1.25rem; }
     .breadcrumb p { max-width: 100%; }
-    .section, .hero, .ctaband, .breadcrumb { padding-left: 1.25rem; padding-right: 1.25rem; }
-    .utilbar { flex-direction: column; gap: 3px; font-size: 11px; padding: 6px 1.25rem; }
-    footer.sitefooter, .legalbar { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .utilbar { flex-direction: column; gap: 3px; font-size: 11px; padding: 6px 1.25rem; text-align: center; }
+    footer.sitefooter { padding: 1.75rem 1.25rem; }
+    .legalbar { padding: 11px 1.25rem; }
+
+    /* Mobile typography */
     .hero h1, .hero .hero-title { font-size: 27px; }
-    .servrow { grid-template-columns: 1fr; }
+    .breadcrumb h1 { font-size: 26px; }
+    .section h2 { font-size: 23px; }
+    .ctaband h2 { font-size: 22px; }
+
+    /* Servrow stays icon-left but tighter */
+    .servrow { grid-template-columns: 46px 1fr; gap: 14px; padding: 18px; }
+
+    /* Other tweaks */
+    .map-embed { height: 240px; }
+    .footer-logo { width: 200px; }
+    .review-hero { padding: 20px; }
+    .review-hero blockquote { font-size: 15px; }
+    .imgph.portrait { aspect-ratio: 4/4.5; }
   }
   @media (max-width: 480px) {
     .proofbar { grid-template-columns: 1fr; }
     .proofbar .stat { border-right: none; }
     .bringlist, .formrow { grid-template-columns: 1fr; }
+
+    /* Even smaller typography */
+    .hero h1, .hero .hero-title { font-size: 25px; line-height: 1.2; }
+    .breadcrumb h1 { font-size: 23px; }
+    .section h2 { font-size: 21px; }
+    .ctaband h2 { font-size: 20px; }
+    .hero-eyebrow, .eyebrow { font-size: 11px; letter-spacing: 0.1em; }
+
+    /* Tighter cards/callout */
+    .card, .staff-card { }
+    .card { padding: 18px; }
+    .callcard { padding: 1.1rem; }
+    .imgph.portrait { aspect-ratio: 1/1; }
+    .map-embed { height: 210px; }
+
+    /* Hero callcard: tighten */
+    .callcard h3 { font-size: 14.5px; }
+    .callcard-phone { font-size: 15px; }
+
+    /* Footer */
+    .footer-logo { width: 180px; }
   }
