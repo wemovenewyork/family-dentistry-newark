@@ -114,7 +114,7 @@
   .brand-mark i { font-size: 22px; }
   .brand-name { font-family: var(--display); font-size: 17px; font-weight: 500; letter-spacing: -0.015em; color: var(--navy); font-variation-settings: "opsz" 144; }
   .brand-sub { font-size: 10.5px; color: var(--mute); letter-spacing: 0.06em; text-transform: uppercase; }
-  nav.mainnav { display: flex; align-items: center; gap: 18px; font-size: 13px; color: var(--ink); }
+  nav.mainnav { display: flex; align-items: center; gap: 22px; font-size: 13px; color: var(--ink); }
   nav.mainnav a { cursor: pointer; padding: 4px 0; position: relative; transition: color var(--t-fast) var(--ease); }
   nav.mainnav a:not(.nav-call)::after {
     content: ""; position: absolute; left: 0; right: 0; bottom: -2px;
