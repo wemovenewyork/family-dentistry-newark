@@ -354,6 +354,7 @@
     object-fit: cover; object-position: center 25%;
     border-radius: var(--radius-lg);
   }
+  .imgph.wide.has-photo > img { object-position: center center; }
   .imgph.portrait { aspect-ratio: 4/5; }
   .imgph.wide { aspect-ratio: 16/10; }
   .imgph.map { height: 156px; }
