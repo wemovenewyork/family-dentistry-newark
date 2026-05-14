@@ -358,6 +358,15 @@
   .imgph.portrait { aspect-ratio: 4/5; }
   .imgph.wide { aspect-ratio: 16/10; }
   .imgph.map { height: 156px; }
+  .map-embed {
+    position: relative; height: 280px;
+    border-radius: var(--radius-lg); overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 0.5px solid var(--line);
+    margin-bottom: 13px;
+    background: var(--pale);
+  }
+  .map-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
   .imgph i { font-size: 70px; }
   .imgph.wide i, .imgph.map i { font-size: 56px; }
   .imgph .ph-cap { margin-top: 10px; font-size: 11.5px; letter-spacing: 0.03em; }
