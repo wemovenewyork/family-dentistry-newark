@@ -684,7 +684,7 @@
     .cardgrid, .reviewgrid, .twocol { grid-template-columns: 1fr; }
 
     /* Mobile nav drawer — bigger touch targets */
-    .navtoggle { display: block; }
+    .navtoggle { display: block; margin-left: auto; }
     nav.mainnav {
       display: none; flex-direction: column; align-items: stretch;
       width: 100%; gap: 4px; padding: 8px 0 4px;
