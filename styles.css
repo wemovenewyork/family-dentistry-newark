@@ -179,6 +179,31 @@
     main { animation: none; }
   }
 
+  /* ---- Hero entrance choreography ---- */
+  .hero .hero-eyebrow,
+  .hero .hero-title,
+  .hero p.lead,
+  .hero-ctas,
+  .callcard {
+    opacity: 0;
+    animation: heroEnter 560ms var(--ease) forwards;
+  }
+  .hero .hero-eyebrow { animation-delay: 80ms; }
+  .hero .hero-title   { animation-delay: 180ms; }
+  .hero p.lead        { animation-delay: 320ms; }
+  .hero-ctas          { animation-delay: 460ms; }
+  .callcard           { animation-delay: 240ms; }
+  @keyframes heroEnter {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero .hero-eyebrow, .hero .hero-title, .hero p.lead,
+    .hero-ctas, .callcard {
+      animation: none; opacity: 1; transform: none;
+    }
+  }
+
   .breadcrumb {
     background: linear-gradient(180deg, var(--pale) 0%, #DEE9F4 100%);
     padding: 2rem 2.25rem 1.75rem;
@@ -361,8 +386,9 @@
 
   /* ---- Section head w/ link ---- */
   .sechead { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px; gap: 16px; }
-  .sechead .link { font-size: 12.5px; color: var(--blue); font-weight: 500; white-space: nowrap; cursor: pointer; }
-  .sechead .link i { font-size: 13px; vertical-align: -2px; }
+  .sechead .link { font-size: 12.5px; color: var(--blue); font-weight: 500; white-space: nowrap; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+  .sechead .link i { font-size: 13px; vertical-align: 0; transition: transform var(--t-fast) var(--ease); }
+  .sechead .link:hover i { transform: translateX(4px); }
 
   /* ---- Service cards grid ---- */
   .cardgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }

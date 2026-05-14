@@ -19,7 +19,7 @@
   document.querySelectorAll('.section, .ctaband, .proofbar, .breadcrumb').forEach(function (el) {
     el.classList.add('reveal');
   });
-  ['.cardgrid', '.steps', '.reviewgrid', '.faqlist', '.twocol', '.bringlist'].forEach(function (sel) {
+  ['.cardgrid', '.steps', '.reviewgrid', '.faqlist', '.twocol', '.bringlist', '.proofbar'].forEach(function (sel) {
     document.querySelectorAll(sel).forEach(function (el) { el.classList.add('reveal-stagger'); });
   });
   document.querySelectorAll('.servrow').forEach(function (row) {
