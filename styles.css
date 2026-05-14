@@ -616,17 +616,20 @@
     display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 24px;
     font-size: 12px;
   }
+  footer.sitefooter { color: #C2D5EA; }
   footer.sitefooter h3 { color: var(--white); font-size: 13.5px; font-weight: 500; margin-bottom: 8px; }
   footer.sitefooter h3 i { font-size: 16px; vertical-align: -2px; color: var(--blue-light); }
+  footer.sitefooter a { color: #DDE9F4; transition: color var(--t-fast) var(--ease); }
+  footer.sitefooter a:hover { color: var(--white); }
   .footer-logo { width: 220px; max-width: 100%; height: auto; display: block; margin: -2px 0 12px -6px; }
-  footer.sitefooter p { color: #9BB4CC; line-height: 1.75; }
+  footer.sitefooter p { color: inherit; line-height: 1.75; }
   footer.sitefooter p.label { color: var(--white); font-weight: 500; margin-bottom: 8px; }
   footer.sitefooter a:hover { color: var(--white); }
   .legalbar {
     background: var(--navy);
     padding: 11px 2.25rem;
     border-top: 0.5px solid rgba(255,255,255,0.1);
-    font-size: 11px; color: #6E84A0;
+    font-size: 11px; color: #A6BCD5;
     display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
   }
 
