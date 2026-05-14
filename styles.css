@@ -632,6 +632,8 @@
     font-size: 11px; color: #A6BCD5;
     display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
   }
+  .legalbar a { color: #DDE9F4; transition: color var(--t-fast) var(--ease); }
+  .legalbar a:hover { color: var(--white); text-decoration: underline; text-underline-offset: 2px; }
 
   /* ---- Responsive ---- */
   @media (max-width: 860px) {
