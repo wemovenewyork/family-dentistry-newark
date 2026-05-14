@@ -345,6 +345,13 @@
     pointer-events: none;
   }
   .imgph > * { position: relative; z-index: 1; }
+  .imgph.has-photo { background: none; }
+  .imgph.has-photo::after { display: none; }
+  .imgph.has-photo > img {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; object-position: center 25%;
+    border-radius: var(--radius-lg);
+  }
   .imgph.portrait { aspect-ratio: 4/5; }
   .imgph.wide { aspect-ratio: 16/10; }
   .imgph.map { height: 156px; }
@@ -747,10 +754,8 @@
 
     <section class="section bordered" style="border-top:0.5px solid var(--line-soft);">
       <div class="split doc">
-        <div class="imgph portrait">
-          <i class="ti ti-user-circle" aria-hidden="true"></i>
-          <span class="ph-cap">Dr. Colden Raines Jr., DDS</span>
-          <span class="ph-tag">Photo placeholder</span>
+        <div class="imgph portrait has-photo">
+          <img src="dr-raines.jpg" alt="Dr. Colden Raines Jr., DDS — Family Dentistry Newark" loading="lazy">
         </div>
         <div>
           <p class="eyebrow">The person behind the practice</p>
@@ -873,10 +878,8 @@
 
     <section class="section bordered">
       <div class="split doc-about">
-        <div class="imgph portrait">
-          <i class="ti ti-user-circle" aria-hidden="true"></i>
-          <span class="ph-cap">Dr. Colden Raines Jr., DDS</span>
-          <span class="ph-tag">Photo placeholder</span>
+        <div class="imgph portrait has-photo">
+          <img src="dr-raines.jpg" alt="Dr. Colden Raines Jr., DDS — Family Dentistry Newark" loading="lazy">
         </div>
         <div>
           <p class="eyebrow">Meet your dentist</p>
