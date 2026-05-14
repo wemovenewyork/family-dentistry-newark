@@ -106,12 +106,12 @@
   }
   .brand { display: flex; align-items: center; gap: 11px; }
   .brand-mark {
-    width: 40px; height: 40px; border-radius: 50%;
-    background: var(--navy); color: var(--white);
+    width: 42px; height: 42px;
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
   }
-  .brand-mark i { font-size: 22px; }
+  .brand-mark i { font-size: 22px; color: var(--white); }
+  .brand-mark img { width: 100%; height: 100%; display: block; }
   .brand-name { font-family: var(--display); font-size: 17px; font-weight: 500; letter-spacing: -0.015em; color: var(--navy); font-variation-settings: "opsz" 144; }
   .brand-sub { font-size: 10.5px; color: var(--mute); letter-spacing: 0.06em; text-transform: uppercase; }
   nav.mainnav { display: flex; align-items: center; gap: 22px; font-size: 13px; color: var(--ink); }
@@ -618,6 +618,7 @@
   }
   footer.sitefooter h3 { color: var(--white); font-size: 13.5px; font-weight: 500; margin-bottom: 8px; }
   footer.sitefooter h3 i { font-size: 16px; vertical-align: -2px; color: var(--blue-light); }
+  .footer-logo { width: 220px; max-width: 100%; height: auto; display: block; margin: -2px 0 12px -6px; }
   footer.sitefooter p { color: #9BB4CC; line-height: 1.75; }
   footer.sitefooter p.label { color: var(--white); font-weight: 500; margin-bottom: 8px; }
   footer.sitefooter a:hover { color: var(--white); }
