@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://family-dentistry-newark.vercel.app/sitemap.xml
